@@ -1,0 +1,302 @@
+@charset "utf-8";
+/*
+메인 컬러 RGB: 189, 232, 196 // 헥사: bde8c4
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+    min-width: 1000px;
+    max-width: 1800px;
+    min-height: 360px;
+}
+h2, div{
+	user-select: none;
+}
+#wrap{
+	width: 1000px;
+	margin: 0 auto;
+}
+#chartBoard{
+	width: 900px;
+	height: 450px;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#chart{
+	maring: 0 auto;
+}
+/*	================== 헤드라이트 메뉴 =======================*/
+#headlight{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+}
+#headlight h2{
+	text-align: left;
+	padding-left: 20px;
+	flex: 8;
+	height: 45px;
+	line-height: 45px;
+	color: black;
+	font-size: 20px;
+	opacity: 0.7;
+}
+#headlightR{
+	text-align: right;
+	padding-right: 20px;
+	flex: 2;
+	height: 45px;
+	line-height: 45px;
+	color: black;
+	font-size: 20px;
+	opacity: 0.7;
+}
+#headlightWrap{
+	width: 100%;
+	display: flex;
+}
+
+#headlightOut{
+	/*background-color: #5D8A5D;*/
+	background-image: url(./source/headback1.png);
+	background-size: 1200px;
+	background-position: center;
+	color: white;
+	height: 360px;
+	margin-bottom: 70px;
+}
+
+#welcimeChrtie{
+	text-align: center;
+	color: black;
+}
+#welcomeMent{
+	margin-top: 13px;
+	font-size: 29px;
+	animation-duration: 1.5s;
+	animation-name: welcomHide;
+	animation-fill-mode: forwards;
+}
+@keyframes welcomHide{
+	from{
+opacity: 0;
+	}
+	
+	to{
+opacity: 1.0;
+	}
+}
+
+#welcimeChrtie p{
+	margin-top: 198.2px;
+	font-size: 13px;
+}
+div[contenteditable='true']:empty:before{
+ 	content: attr(placeholder);
+	color: rgba(0,0,0,0.5);
+ 	line-height: 30px;
+ 	font-size: 14px;
+}
+div[contenteditable='true']{
+	line-height: 30px;
+  	font-size: 14px;
+}
+/*	================ 추가 라벨 설정 ====================	*/
+#needMoreLabels{
+	display: flex;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#needMoreLabels div{
+	flex: 1;
+}
+#nmltable{
+	width: 100%;
+}
+#nmltable input{
+	width: 100%;
+	height: 30px;
+	border: 0;
+	text-align: center;
+}
+
+
+
+/*	================== 에디터 메뉴 =======================*/
+
+.boxLines{
+	display: flex;
+}
+.boxs{
+	padding: 10px;
+	flex: 1;
+	border-radius: 3px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	border: 0.5px solid #bde8c4;
+}
+.boxsTitle{
+	background-color: #bde8c480;
+}
+.boxsSelect:hover{
+	animation-duration: 0.5s;
+	animation-name: selectBox;
+	animation-fill-mode: forwards;
+}
+@keyframes selectBox{
+	from{
+background-color: #ffffff;
+	}
+	
+	to{
+background-color: #bde8c480;
+	}
+}
+a{
+	color: black;
+	text-decoration:none;
+	user-select: none;
+}
+.oneData:hover{
+	animation-duration: 0.5s;
+	animation-name: selectBox;
+	animation-fill-mode: forwards;
+}
+.twoData{
+	background-color:#A7BFF040;
+}
+.twoData:hover{
+	animation-duration: 0.5s;
+	animation-name: twob;
+	animation-fill-mode: forwards;
+}
+@keyframes twob{
+	from{
+background-color: #A7BFF040;
+	}
+	
+	to{
+background-color: #bde8c480;
+	}
+}
+
+/*	================== 테이블 시트 ======================= */
+#tableSheet{
+	display: flex;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	flex-direction: column;
+}
+#tableOne, #tableTwo, #tableThird {
+	display: flex;
+}
+.blankTable{
+	flex: 1;
+}
+#minusTableRow{
+	flex: 20;
+	height: 45px;
+	display: none;
+	text-align: center;
+	line-height: 45px;
+	vertical-align: center;
+}
+#addTableRow{
+	flex: 20;
+	height: 45px;
+	display: none;
+	text-align: center;
+	line-height: 45px;
+}
+#tableArea{
+	flex: 20;
+}
+#addTableColums{
+	flex: 1;
+	text-align: center;
+}
+#minusTableColums{
+	flex: 1;
+	text-align: center;
+}
+#minusTableColums:hover img, #addTableColums:hover img, #addTableRow:hover img, #minusTableRow:hover img{
+	opacity: 0.5;
+}
+.rowChange{
+	margin-top:40px;
+}
+
+/*====================테이블======================*/
+.tableSheetTr{
+	display: flex;
+}
+td{
+	flex: 1;
+}
+table, td{
+	border: 0.1px solid rgba(189, 232, 196, 0.7);
+	border-collapse: collapse;
+	padding: 2px;
+	height: 30px;
+}
+.tableDatas, .tableLabels, .tableColors, .needMoreDatas{
+	border: 0;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+.tableLabels, .needMoreDatas, .emptyfield{
+	background-color: rgba(189, 232, 196, 0.5);
+	border: 0;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+}
+
+
+/*	================== 폼 모양 ======================= */	
+#ctName, #fileinput{
+	display: none;
+}
+
+.chartstyle{
+	display: none;
+}
+img{
+	height: 30px;
+	width: 30px;
+	opacity: 0.2;
+	vertical-align: middle;
+}
+/*	================= 에디터 하단 메뉴 ==================== */
+#footmenu{
+	display: flex;	
+	margin-bottom: 70px;	
+}
+.footboxs{
+	flex: 1;
+	border: 0.1px solid white;
+}
+#chartImgDownload{
+	flex: 2;
+}
+#callMyChart{
+	flex: 1;
+}
+#setMyChart{
+	flex: 1;
+}
+/*	================ Footer 스타일 설정 ==================*/
+#footerLayout{
+	height: 100px;
+	line-height: 100px;
+	background-color: #bde8c4;
+}
+#copyright{
+	text-align: center;
+}
+
